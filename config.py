@@ -1,12 +1,12 @@
 from os import environ
 
-API_ID = int(environ.get("API_ID", ""))
-API_HASH = environ.get("API_HASH", "")
-BOT_TOKEN = environ.get("BOT_TOKEN", "")
+API_ID = int(environ.get("API_ID", "20959976"))
+API_HASH = environ.get("API_HASH", "4f648d2c4c0fd1b89a995bb85b2dba67")
+BOT_TOKEN = environ.get("BOT_TOKEN", "8069761561:AAH2_2k_rKsKJh8Q9eEmh_AIef-8h8D-66c")
 
 # Make Bot Admin In Log Channel With Full Rights
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", ""))
-ADMINS = int(environ.get("ADMINS", ""))
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1002663107514"))
+ADMINS = int(environ.get("ADMINS", "-1008098368518"))
 
 # Warning - Give Db uri in deploy server environment variable, don't give in repo.
 DB_URI = environ.get("DB_URI", "") # Warning - Give Db uri in deploy server environment variable, don't give in repo.
