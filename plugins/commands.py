@@ -65,17 +65,17 @@ async def accept(client, message):
                 break
             for req in join_requests:
                 try:
-                    await acc.approve_chat_join_request(chat_id, req.from_user.id)
+                    await acc.approve_chat_join_request(chat_id, req.user.id)
                     try:
                         await client.send_message(
-                            req.from_user.id,
-                            f"**Hello {req.from_user.mention}!\nWelcome To {info.title}\n\n__Powered By : @VJ_Botz__**"
+                            req.user.id,
+                            f"**Hello {req.user.mention}!\nWelcome To {info.title}\n\n__Powered By : @VJ_Botz__**"
                         )
                     except Exception as e:
-                        print(f"Failed to send message to {req.from_user.id}: {e}")
+                        print(f"Failed to send message to {req.user.id}: {e}")
                     success += 1
                 except Exception as e:
-                    print(f"Failed to approve {req.from_user.id}: {e}")
+                    print(f"Failed to approve {req.user.id}: {e}")
                     failed += 1
             await asyncio.sleep(1)
         await msg.edit(f"**Successfully accepted join requests.**\n\n✅ Success: {success}\n❌ Failed: {failed}")
